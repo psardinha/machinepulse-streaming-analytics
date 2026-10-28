@@ -1,0 +1,31 @@
+[project]
+name = "machinepulse"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Paulo Sardinha", email = "pasardinha@sapo.pt" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "boto3>=1.43.118",
+    "duckdb>=2.0.0",
+    "pandas>=3.1.0",
+    "pyarrow>=26.0.0",
+    "pydantic>=2.10,<3",
+    "pytz>=2026.5",
+    "s3fs>=0.4.2",
+]
+
+[project.scripts]
+machinepulse = "machinepulse:main"
+
+[build-system]
+requires = ["uv_build>=0.11.19,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.2",
+]

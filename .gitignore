@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Generated datasets
+data
+!data/.gitkeep
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+crash.log
+*.lock.hcl
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.tfvars
+!example.tfvars
+
+# Generated Flink build artifacts
+flink_app/target/
+flink_app/package/
+flink_app/*.zip
